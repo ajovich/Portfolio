@@ -24,9 +24,12 @@
 
 ## Resources Used
 
-* YouTube: Web Dev Simplified, Skillthrive, Kevin Powell, Webflow, countless others
+* YouTube: Web Dev Simplified, Skillthrive, Kevin Powell,     Webflow, countless others
+
 * CSS-Tricks A Complete Guide to Flexbox
+
 * W3Schools
+
 * Google Fonts
 
 ## Images
