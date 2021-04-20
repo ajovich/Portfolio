@@ -31,9 +31,11 @@
 
 ## Images
 
-<img src ="images/HamburgerMenuToggle.png" alt="Hamburger Menu Toggle Active">
-<img src ="images/MediumSized.png" alt="Responsive Design Medium Sized Screen">
-<img src ="images/MobileSized600px.png" alt="Responsive Design Mobile">
+![Hamburger Menu Toggle Active](images/HamburgerMenuToggle.png)
+
+![Responsive Design Medium Sized Screen](images/MediumSized.png)
+
+![Responsive Design Mobile](images/MobileSized600px.png)
 
 ## URL of Deployed Application
 
