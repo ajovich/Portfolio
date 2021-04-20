@@ -31,13 +31,6 @@
 
 ## Images
 
-<img src="images/MediumSized.png" alt="Responsive Design Medium Sized Screen">
-
-<img src="images/MobileSized600px.png" alt="Responsive Design Mobile">
-
-<img src="images/HamburgerMenuToggle.png" alt="Hamburger Menu Toggle Active">
-
-
 ![Hamburger Menu Toggle Active](images/HamburgerMenuToggle.png)
 
 ![Responsive Design Medium Sized Screen](images/MediumSized.png)
