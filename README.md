@@ -42,8 +42,8 @@
 
 ## URL of Deployed Application
 
-* 
+* https://ajovich.github.io/homework02/
 
 ## URL of GitHub Repository 
 
-* 
+* https://github.com/ajovich/homework02
