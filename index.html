@@ -1,47 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
- 
-   <head>
-       <meta charset="UTF-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1">
-       <link rel="stylesheet" href="./style.css"/>
-       <link rel="stylesheet" href="./script.js"/>
-       <title>Allysha Marie Jovich</title>
-   </head>
- 
-   <body>
-       <div class="box">
-           <header>
-               <div class="header">
-                       <h1><span>Allysha Jovich</span></h1>
-                    </div>
-                   <nav class="main-nav">
-                       <a href="#aboutme">About Me</a>
-                       <a href="#projects">Work</a>
-                       <a href="#contactme">Contact Me</a>
-                       <a href="#resume">Resume</a>
-                   </nav>
-               </div>
-           </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">     
+  <link rel="stylesheet" href="./style.css"/>
+  <title>Allysha Jovich Portfolio</title>
+</head>
 
-           <main>
-            <div class="flex-container">
-                <div class="flex-item">About Me</div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                    <br>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                <div class="flex-item">Work</div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, asperiores?</p>
-                <div class="flex-item">Contact Me</div>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi, velit?</p>
-            </div>
-        </main>
+<main>
+  <nav class="navigation">
+    <div class="header-title"><small>ALLYSHA M. JOVICH</small></div>
+    <a href="#" class="toggle-button">
+      <!-- 3 span classes represent 3 lines on hamburger menu for responsive navigation bar -->
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </a>
+    <div class="navigation-links">
+      <ul>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Projects">Projects</a></li>
+        <li><a href="#Resume">Resume</a></li>
+        <li><a href="#Contact">Contact</a></li>
         
-            <div class="banner-area">
-                <h2>Cool subtitle here!</h2>
-            </div>
-    
-   </body>
+      </ul>
+    </div>
+    </nav>
+</main>
+
+<body>
+  <section>
+    <div class="container">
+      <div class="flex-items">
+        <div>
+          <h2 class="text-left">About me</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste doloremque mollitia quas quos, officia exercitationem ut quia voluptate alias, sunt quod vel eligendi amet vitae. Tenetur reiciendis quas eveniet quis! Praesentium perspiciatis omnis rem, nam fugit quas facilis? Vitae, sit recusandae? Culpa minus veniam natus deleniti iure incidunt ex quam?</p>
+        </div>
+        <div>
+          <img class="profile-picture" src="https://via.placeholder.com/350" alt="Profile picture">
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- addEventListener in script.js, when user clicks image, the image enlarges -->
+  <section>
+    <div class="container">
+      <div class="flex-items">
+        <h2 class="text-left">Projects</h2>
+        <div>
+          <img class="projects" src="https://via.placeholder.com/250" alt="Project 1 placeholder image">
+        </div>
+        <div>
+          <img class="projects" src="https://via.placeholder.com/250" alt="Project 2 placeholder image">
+        </div>
+        <div>
+          <img class="projects" src="https://via.placeholder.com/250" alt="Project 3 placeholder image">
+        </div>
+        <div>
+          <img class="projects" src="https://via.placeholder.com/250" alt="Project 4 placeholder image">
+        </div>
+        <div>
+          <img class="projects" src="https://via.placeholder.com/250" alt="Project 5 placeholder image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+    <div class="container">
+      <div class="flex-items">
+        <div>
+          <h2 class="text-left">Resume</h2>
+          <p></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="flex-items">
+          <h2 class="text-left">Contact</h2>
+          <ul class="contact-links">
+            <li><a href="#">###-###-####</a></li>
+            <li><a href="#Email">E-mail</a></li>
+            <li><a href="#LinkedIn">LinkedIn</a></li>
+          </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="flex-items">
+        <nav class="footer">
+          <p><small>&#169; ALLYSHA JOVICH 2021</small></p>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+    <script src="script.js"></script>
+</body>
 </html>

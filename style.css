@@ -1,114 +1,229 @@
-/*background of container
-#ededf7
- 
-#435878 primary text color in body*/
- 
-/*
-.header {
-   display: flex;
-   padding: 10px;
-   font-family: 'Helvetica', 'Arial';
-   font-size: 25px;
-   background-color: #343944;
-   color: #8fccce;
-   text-align: right;
-}
- 
-.topnav-right {
-   display: inline-block;
-   color: #8fccce;
-   list-style-type: none;
+/* Need to put font sizes in rem instead of px for responsive layout */
+/* Navigation bar - change color/design to underline? . Accessibility issue if only difference between active/inactive is hue*/
+/* How to get rid of extra space at bottom of webpage after footer? */
+/* Fix contact links - align left directly underneath Contact */
+/* Have project images wrap as screen size decreases or additional project images added */
+
+/* Need to decide on color scheme, font family. Call variables in CSS with colors/fonts consistently used throughout portfolio
+:root {
+  --color-primary: #;
+  --color-secondary: #;
+  --color-accent: #;
+
+  --ff-primary:  ;
+  --ff-accent: ;
 } */
- 
-/* .navBar {
-   padding-top: 10px;
-   margin-right: 10px;
-   float: right;
-   font-family: 'Helvetica', 'Arial';
-   font-size: 20px;
-   font-style: underline;
-}
-*/
- 
-/* ul {
-   display: block;
-   margin-block-start: 1em;
-   margin-block-end: 1em;
-   font-family: 'Helvetica', 'Arial';
-   font-size: 20px;
-} */
- 
- 
+
+/* Border-box width/height include content/padding/border, does not include margin */
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Helvetica', 'Arial';
+   box-sizing: border-box;
+   font-family: 'Lato', sans-serif;
  }
-  
- .body {
-    text-align: center;
+ 
+ /* Setting to 0px for margin/padding allows navigation bar to be right on edge of screen, no extra white space */
+ body {
+   margin: 0px;
+   padding: 0px;
  }
-  
- header {
-    height: 75px;
-    background: #343944;
-    flex: wrap;
+ 
+ .navigation {
+   align-items: center; /* Lines up in center with name */ 
+   background-color: #A53860;
+   color: white;
+   display: flex; /* Use flex to line up navigation side by side */
+   justify-content: space-between;
+   position: relative;
  }
-  
- .name {
-    width: 30%;
-    float: left;
-    line-height: 100px;
+ 
+ .header-title {
+   font-size: 24px;
+   margin: 8px;
  }
-  
- h1 {
-    text-decoration: none;
-    font-size: 34px;
-    color: #343944;
+ 
+ .navigation-links {
+   height: 100%;
  }
-  
- h1 span {
-    background-color: #8fccce;
+ 
+ .navigation-links ul {
+   display: flex; /* Lines links up side by side */
+   margin: 0px;
+   padding: 0px;
  }
-  
- .main-nav a {
-    text-decoration: none;
-    border-bottom: 2px solid #8fccce;
-    padding-bottom: 2px;
-    font-size: 20px;
-    margin: 0 5px;
-    color: #8fccce;
-    float: right;
+ 
+ .navigation-links li {
+   list-style: none; /* Removed list style, no underline, no bullets */
  }
-  
- h2 {
-    float:right;
+ 
+ .navigation-links li a {
+   color: white;
+   display: block;
+   padding: 16px;
+   text-decoration: none; /* Removes underline from links */
  }
-  
- .banner-area {
-    width: 100%;
-    height: 150px;
-    position: fixed;
-    background-image: url(/menu_screenshot.png);
+ 
+ .navigation-links li:hover {
+   background-color: #DA627D;
+   border-radius: 3px;
+   opacity: 0.75; /* Decreased opacity for hover effect */
  }
-  
- h2 {
-    background-color: #8fccce;
-    color: #343944;
-  
+ 
+ /* Hamburger menu for responsive web design */ 
+ .toggle-button {
+   flex-direction: column; /* Span line up on top of one another */
+   display: none; /* Prevents from showing by default, only want it to show when user 'clicks' in smaller screen size */
+   height: 20px;
+   justify-content: space-between;
+   position: absolute; /* Hamburger menu to right side of screen without messing with flow of other elements, element positioned absolutely to first positioned parent */
+   right: 16px; /* Allows space for hamburger menu to not be all the way at the right side of screen */
+   top: 12px; /* Allows space for hamburger menu to not be all the way at the top of the navigation bar */
+   width: 30px;
  }
-
- .flex-container {
+ 
+ /* Styles hamburger menu bars */
+ .toggle-button .bar {
+   background-color: white;
+   border-radius: 3px; 
+   height: 3px;
+   width: 100%;
+ }
+ 
+ /* Media query when conditions inside are met (screen size <600px run the following code from lines 89-119. */
+ @media (max-width: 600px) {
+   .toggle-button {
      display: flex;
+   }
+ 
+   /* Links span 100% of screen */
+   .navigation-links {
+     display: none;
+     width: 100%;
+   }
+ 
+   /* Change flex direction to column and align at top */
+   .navigation {
      flex-direction: column;
-     justify-content: center;
-     background-color: #ededf7;
-
+     align-items: flex-start;
+   }
+ 
+   /* Stacks links top-bottom, links span 100% of menu */
+   .navigation-links ul {
+     flex-direction: column;
+     width: 100%;
+   }
+ 
+   /* Centers text  */
+   .navigation-links ul li {
+     text-align: center;
+   }
+ 
+   /* Anchor tags closer in space */
+   .navigation-links li a {
+     padding: 8px 16px;
+   }
+ 
+   /* Hamburger menu activated by user when clicked on */
+   .navigation-links.active {
+     display: flex;
+   }
  }
-
- .flex-item {
-    background-color: #ededf7;
-    color: #455a79;
-    text-align: left;
-    font-size: 40px;
+ 
+ h2,
+ p 
+ footer {
+   color: #450920;
+   margin: 0px;
+   margin-bottom: 16px; /* Gives spacing of text size  */
+ }
+ 
+ body {
+   font-family: 'Lato', sans-serif;
+   font-size: 16px;
+   line-height: 1.5;
+ }
+ 
+ section {
+   padding: 48px 0;
+ }
+ 
+ .container {
+   margin-inline: auto;
+   width: min(90%, 1000px);
+ }
+ 
+ .text-left {
+   text-align: left;
+ }
+ 
+ img {
+   max-width: 100%;
+   border-radius: 3px;
+ }
+ 
+ .profile-picture {
+   border-radius: 3px;
+ }
+ 
+ .projects:hover {
+   opacity: 0.75;
+ }
+ 
+ .flex-items {
+   display: flex;
+   flex-direction: column;
+ }
+ 
+ /* ?? Want project item pictures to wrap if more project images added or screen size begins to shrink ?? */
+  .flex-items .projects {
+   flex-direction: column;
+   flex-wrap: wrap;
+   flex-flow: column wrap;
+ } 
+ 
+ @media (min-width: 600px) {
+   .flex-items {
+     flex-direction: row;
+   }
+ 
+   .flex-items > * {
+     flex-basis: 100%;
+     margin-bottom: 16px;
+   }
+ 
+ /* 12px space between columns. * + * is adjacent sibling selector, takes element div AND sibling div next to it  */
+   .flex-items > * + * {
+     margin-left: 12px;
+   }
+ }
+ 
+ .contact-links {
+   align-content: flex-start;
+   display: flex;
+   height: 100%;
+   justify-content: space-between;
+ }
+ 
+ .contact-links ul {
+   margin: 0px;
+   padding: 0px;
+ }
+ 
+ .contact-links li {
+   list-style: none; /* Removed list style, no underline, no bullets */
+ }
+ 
+ .contact-links li a {
+   color: #450920;
+   padding: 16px;
+   text-decoration: none; /* Removes underline from links */
+ }
+ 
+ .contact-links li a:hover {
+   color: #450920;
+   opacity: 0.5;
+ }
+ 
+ .footer {
+   display: flex;
+   font-size: 10px;
+   padding: 0px; 
  }
